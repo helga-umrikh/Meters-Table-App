@@ -1,0 +1,16 @@
+import { type ReactNode } from 'react';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  position: absolute;
+  right: 64px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+`;
+
+export default function LogoWrapper({ children }: { children: ReactNode }) {
+  return <Wrapper>{children}</Wrapper>;
+}

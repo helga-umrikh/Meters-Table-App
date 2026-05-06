@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --border: #e5e4e7;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+
+  /* Typography — font */
+  --font: Roboto, system-ui, sans-serif;
+
+  /* Typography — body */
+  --body-size: 14px;
+  --body-weight: 400;
+  --body-line-height: 20px;
+  --body-color: #5e6674;
+  --body-color-emphasis: #1f2939;
+
+  /* Typography — heading */
+  --h-weight: 500;
+
+  /* Typography — heading 2 */
+  --h2-size: 24px;
+  --h2-line-height: 32px;
+
+  /* Typography — heading 4 */
+  --h4-size: 13px;
+  --h4-line-height: 16px;
+}
