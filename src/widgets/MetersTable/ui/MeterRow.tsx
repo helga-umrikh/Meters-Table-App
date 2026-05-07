@@ -3,8 +3,6 @@ import type { ComponentType } from 'react';
 import { type Area } from '@/entities/area';
 import { type KnownMeterKind, type Meter } from '@/entities/meter';
 import ColdWaterIcon from '@/shared/assets/cold-water.svg?react';
-import ElectricityIcon from '@/shared/assets/electricity.svg?react';
-import FireIcon from '@/shared/assets/fire.svg?react';
 import HotWaterIcon from '@/shared/assets/hot-water.svg?react';
 import TrashIcon from '@/shared/assets/trash.svg?react';
 
@@ -22,15 +20,11 @@ interface MeterRowProps {
 const TYPE_LABELS: Partial<Record<KnownMeterKind, string>> = {
   ColdWaterAreaMeter: 'ХВС',
   HotWaterAreaMeter: 'ГВС',
-  HeatAreaMeter: 'Отопление',
-  ElectricityAreaMeter: 'Электричество',
 };
 
 const TYPE_LOGOS: Partial<Record<KnownMeterKind, ComponentType>> = {
-  HeatAreaMeter: FireIcon,
   ColdWaterAreaMeter: ColdWaterIcon,
   HotWaterAreaMeter: HotWaterIcon,
-  ElectricityAreaMeter: ElectricityIcon,
 };
 
 const getPrimaryKind = (types: string[]): KnownMeterKind | undefined =>

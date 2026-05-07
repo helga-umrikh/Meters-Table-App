@@ -1,9 +1,4 @@
-export type KnownMeterKind =
-  | 'ColdWaterAreaMeter'
-  | 'HotWaterAreaMeter'
-  | 'HeatAreaMeter'
-  | 'ElectricityAreaMeter'
-  | 'AreaMeter';
+export type KnownMeterKind = 'ColdWaterAreaMeter' | 'HotWaterAreaMeter' | 'AreaMeter';
 
 export type MeterKind = KnownMeterKind | (string & {});
 
