@@ -10,7 +10,7 @@ export function HomePage() {
   const [currentPage, setCurrentPage] = useState(1);
   const offset = (currentPage - 1) * PAGE_SIZE;
 
-  const { data, isLoading, error, refetch } = useMetersList({
+  const { data, isLoading, error } = useMetersList({
     limit: PAGE_SIZE,
     offset,
   });
@@ -19,7 +19,6 @@ export function HomePage() {
   const handleDelete = async (meterId: string) => {
     try {
       await deleteMeter(meterId);
-      refetch();
     } catch (err) {
       console.error('[delete] failed', err);
     }

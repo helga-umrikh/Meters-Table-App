@@ -2,6 +2,8 @@ import { useCallback, useState } from 'react';
 
 import { deleteMeter } from '@/entities/meter';
 
+import { invalidateMetersCache } from './useMetersList';
+
 export interface UseDeleteMeterState {
   isLoading: boolean;
   error: unknown;
@@ -21,6 +23,7 @@ export const useDeleteMeter = (): [UseDeleteMeterTrigger, UseDeleteMeterState] =
     setState({ isLoading: true, error: undefined, deletedId: undefined });
     try {
       await deleteMeter(meterId);
+      invalidateMetersCache();
       setState({ isLoading: false, error: undefined, deletedId: meterId });
     } catch (err) {
       setState({ isLoading: false, error: err, deletedId: undefined });
