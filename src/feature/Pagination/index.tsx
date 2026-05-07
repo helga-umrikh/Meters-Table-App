@@ -1,4 +1,4 @@
-import Text from '../../shared/ui/Text';
+import { Text } from '@/shared/ui';
 import { PageBtn, PaginationWrapper, DotsWrapper } from './styles';
 
 interface PaginationProps {

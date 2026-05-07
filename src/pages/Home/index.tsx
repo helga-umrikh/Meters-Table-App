@@ -1,5 +1,5 @@
 import PageWrapper from '@/components/PageWrapper';
-import Text from '@/shared/ui/Text';
+import { Text } from '@/shared/ui';
 
 import { MetersTable } from '@/feature/MeterTable';
 import { mockMeters } from '@/mocks/meters';

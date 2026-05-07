@@ -58,7 +58,7 @@ const StyledText = styled.span<{ $variant: Variant; $color: Color }>`
   ${({ $variant }) => variants[$variant]}
 `;
 
-export default function Text({
+export function Text({
   variant = 'body',
   color = 'primary',
   as,
