@@ -50,4 +50,8 @@ app.delete('/api/v4/test/meters/:id/', (req, res) => {
   res.status(204).send();
 });
 
-app.listen(PORT, () => console.log(`Mock API running on port ${PORT}`));
+if (require.main === module) {
+  app.listen(PORT, () => console.log(`Mock API running on port ${PORT}`));
+}
+
+module.exports = app;
