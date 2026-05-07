@@ -18,11 +18,9 @@ interface MeterRowProps {
   disabled?: boolean;
 }
 
-const TYPE_LABELS: Record<Meter['_type'], string> = {
-  heatSupply: 'ТПЛ',
+const TYPE_LABELS: Partial<Record<Meter['_type'], string>> = {
   coldWaterAreaMeter: 'ХВС',
   hotWaterAreaMeter: 'ГВС',
-  electricitySupply: 'ЭЛДТ',
 };
 
 const TYPE_LOGOS: Record<Meter['_type'], ComponentType> = {
