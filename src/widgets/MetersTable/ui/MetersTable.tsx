@@ -1,19 +1,20 @@
 import { useState } from 'react';
 
-import { mockAreas } from '../../mocks/meters';
-import type { Meter, Area } from '../../types';
-import { MeterRow } from '../MeterRow';
-import { Pagination } from '../Pagination';
+import { type Area } from '@/entities/area';
+import { type Meter } from '@/entities/meter';
+import { Pagination } from '@/shared/ui';
 
+import { MeterRow } from './MeterRow';
 import { Table, THead, TBody, Th, TFooter, tableColumns } from './styles';
 
 interface MetersTableProps {
   meters: Meter[];
+  areas: Area[];
 }
 
 const PAGE_SIZE = 20;
 
-export const MetersTable = ({ meters }: MetersTableProps) => {
+export const MetersTable = ({ meters, areas }: MetersTableProps) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.max(1, Math.ceil(meters.length / PAGE_SIZE));
@@ -23,7 +24,7 @@ export const MetersTable = ({ meters }: MetersTableProps) => {
   );
 
   const getArea = (areaId: number): Area | undefined =>
-    mockAreas.find((area) => area.id === areaId);
+    areas.find((area) => area.id === areaId);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(Math.min(Math.max(1, page), totalPages));

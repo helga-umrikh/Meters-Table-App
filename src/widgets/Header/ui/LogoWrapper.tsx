@@ -10,6 +10,6 @@ const Wrapper = styled.div`
   height: 120px;
 `;
 
-export default function LogoWrapper({ children }: { children: ReactNode }) {
+export function LogoWrapper({ children }: { children: ReactNode }) {
   return <Wrapper>{children}</Wrapper>;
 }

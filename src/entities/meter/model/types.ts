@@ -11,8 +11,3 @@ export interface Meter {
   area_id: number;
   description: string;
 }
-
-export interface Area {
-  id: number;
-  address: string;
-}

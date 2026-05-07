@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import Header from '@/components/Header';
+import { HomePage } from '@/pages/Home';
+import { Header } from '@/widgets/Header';
 
-import HomePage from './pages/Home';
-import GlobalStyles from './styles/GlobalStyles';
+import { GlobalStyles } from './styles/global';
 
 const AppContainer = styled.div`
   width: 100%;
@@ -12,7 +12,7 @@ const AppContainer = styled.div`
   flex-direction: column;
 `;
 
-export default function App() {
+export function App() {
   return (
     <>
       <GlobalStyles />

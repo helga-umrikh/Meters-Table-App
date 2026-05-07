@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import Logo from '../../assets/logo.svg?react';
+import Logo from '@/shared/assets/logo.svg?react';
 
-import LogoWrapper from './LogoWrapper';
+import { LogoWrapper } from './LogoWrapper';
 
 const HeaderContainer = styled.header`
   position: relative;
@@ -14,7 +14,7 @@ const HeaderContainer = styled.header`
   border-bottom-right-radius: 32px;
 `;
 
-export default function Header() {
+export function Header() {
   return (
     <HeaderContainer>
       <LogoWrapper>

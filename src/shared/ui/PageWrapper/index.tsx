@@ -8,6 +8,6 @@ const Wrapper = styled.main`
   flex: 1;
 `;
 
-export default function PageWrapper({ children }: { children: ReactNode }) {
+export function PageWrapper({ children }: { children: ReactNode }) {
   return <Wrapper>{children}</Wrapper>;
 }

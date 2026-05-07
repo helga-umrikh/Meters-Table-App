@@ -1,15 +1,15 @@
 import type { ComponentType } from 'react';
 
-import ColdWaterIcon from '@/assets/cold-water.svg?react';
-import ElectricityIcon from '@/assets/electricity.svg?react';
-import FireIcon from '@/assets/fire.svg?react';
-import HotWaterIcon from '@/assets/hot-water.svg?react';
-import TrashIcon from '@/assets/trash.svg?react';
-import type { Meter, Area } from '@/types';
+import { type Area } from '@/entities/area';
+import { type Meter } from '@/entities/meter';
+import ColdWaterIcon from '@/shared/assets/cold-water.svg?react';
+import ElectricityIcon from '@/shared/assets/electricity.svg?react';
+import FireIcon from '@/shared/assets/fire.svg?react';
+import HotWaterIcon from '@/shared/assets/hot-water.svg?react';
+import TrashIcon from '@/shared/assets/trash.svg?react';
 
-import { Td } from '../MeterTable/styles';
-
-import { Row, TypeCell, DescriptionCell, DeleteBtn } from './styles';
+import { Row, TypeCell, DescriptionCell, DeleteBtn } from './MeterRow.styles';
+import { Td } from './styles';
 
 interface MeterRowProps {
   meter: Meter;
