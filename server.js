@@ -11,7 +11,7 @@ app.get('/api/v4/test/meters/', (req, res) => {
   const limit = parseInt(req.query.limit) || 20;
   const offset = parseInt(req.query.offset) || 0;
   const results = meters.results.slice(offset, offset + limit);
-  res.json({ count: meters.count, results });
+  res.json({ count: meters.results.length, results });
 });
 
 // GET /api/v4/test/areas/
@@ -23,6 +23,9 @@ app.get('/api/v4/test/areas/', (req, res) => {
 
 // DELETE /api/v4/test/meters/:id/
 app.delete('/api/v4/test/meters/:id/', (req, res) => {
+  const idx = meters.results.findIndex(m => m.id === req.params.id);
+  if (idx === -1) return res.status(404).json({ detail: 'Not found' });
+  meters.results.splice(idx, 1);
   res.status(204).send();
 });
 
