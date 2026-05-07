@@ -1,3 +1,4 @@
+import { observer } from 'mobx-react-lite';
 import { useState } from 'react';
 
 import { useDeleteMeter, useMetersList } from '@/features/meters-list';
@@ -6,15 +7,15 @@ import { MetersTable } from '@/widgets/MetersTable';
 
 const PAGE_SIZE = 20;
 
-export function HomePage() {
+export const HomePage = observer(() => {
   const [currentPage, setCurrentPage] = useState(1);
   const offset = (currentPage - 1) * PAGE_SIZE;
 
-  const { data, isLoading, error } = useMetersList({
+  const { meters, areas, total, isLoading, error } = useMetersList({
     limit: PAGE_SIZE,
     offset,
   });
-  const [deleteMeter, deleteState] = useDeleteMeter();
+  const { trigger: deleteMeter, isLoading: isMutating } = useDeleteMeter();
 
   const handleDelete = async (meterId: string) => {
     try {
@@ -31,17 +32,17 @@ export function HomePage() {
       </Text>
 
       <MetersTable
-        meters={data?.meters ?? []}
-        areas={data?.areas ?? []}
-        total={data?.total ?? 0}
+        meters={meters}
+        areas={areas}
+        total={total}
         pageSize={PAGE_SIZE}
         currentPage={currentPage}
         onPageChange={setCurrentPage}
         onDeleteMeter={handleDelete}
-        isMutating={deleteState.isLoading}
+        isMutating={isMutating}
         isLoading={isLoading}
         error={error}
       />
     </PageWrapper>
   );
-}
+});
