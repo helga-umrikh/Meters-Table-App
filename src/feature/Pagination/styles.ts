@@ -18,12 +18,14 @@ export const PageBtn = styled.button<{ $active?: boolean }>`
   justify-content: center;
   border: 1px solid var(--button-border);
   border-radius: 8px;
-  background: ${({ $active }) => ($active ? 'var(--button-active-bg)' : 'var(--bg)')};
+  background: ${({ $active }) =>
+    $active ? 'var(--button-active-bg)' : 'var(--bg)'};
   cursor: ${({ $active }) => ($active ? 'default' : 'pointer')};
   transition: background-color 0.15s;
 
   &:hover:not(:disabled) {
-    background-color: ${({ $active }) => ($active ? 'var(--button-active-bg)' : 'var(--button-hover-bg)')};
+    background-color: ${({ $active }) =>
+      $active ? 'var(--button-active-bg)' : 'var(--button-hover-bg)'};
   }
 
   &:disabled {

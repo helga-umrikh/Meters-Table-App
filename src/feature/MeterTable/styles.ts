@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+
 import { Text } from '@/shared/ui';
 
 const borderStyle = '1px solid var(--table-border)';

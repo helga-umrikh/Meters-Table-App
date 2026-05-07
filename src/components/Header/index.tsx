@@ -1,5 +1,7 @@
 import styled from 'styled-components';
+
 import Logo from '../../assets/logo.svg?react';
+
 import LogoWrapper from './LogoWrapper';
 
 const HeaderContainer = styled.header`

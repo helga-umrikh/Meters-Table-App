@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import type { Meter, Area } from '../../types';
+
 import { mockAreas } from '../../mocks/meters';
-import { Table, THead, TBody, Th, TFooter, tableColumns } from './styles';
+import type { Meter, Area } from '../../types';
 import { MeterRow } from '../MeterRow';
 import { Pagination } from '../Pagination';
+
+import { Table, THead, TBody, Th, TFooter, tableColumns } from './styles';
 
 interface MetersTableProps {
   meters: Meter[];
