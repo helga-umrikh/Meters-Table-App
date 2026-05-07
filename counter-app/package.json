@@ -1,0 +1,46 @@
+{
+  "name": "counter-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:prod": "tsc -b && vite build --mode production",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "preview": "vite preview",
+    "preview:prod": "vite preview --mode production"
+  },
+  "dependencies": {
+    "axios": "^1.16.0",
+    "mobx": "^6.15.2",
+    "mobx-react-lite": "^4.1.1",
+    "mobx-state-tree": "^7.2.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "styled-components": "^6.4.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^10.2.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import-x": "^4.16.2",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.5.0",
+    "prettier": "^3.8.3",
+    "terser": "^5.47.1",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.58.2",
+    "vite": "^8.0.10",
+    "vite-plugin-svgr": "^5.2.0"
+  }
+}
