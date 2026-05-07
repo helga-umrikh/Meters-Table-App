@@ -98,3 +98,18 @@ export const Td = styled(Text).attrs<{ variant?: string; color?: string }>(
   border-bottom: ${borderStyle};
   white-space: normal;
 `;
+
+export const PlaceholderRow = styled.tr`
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  height: 200px;
+`;
+
+export const PlaceholderCell = styled.td<{ tone?: 'default' | 'error' }>`
+  text-align: center;
+  padding: 24px 16px;
+  color: ${({ tone }) =>
+    tone === 'error' ? 'var(--error, #c62828)' : 'var(--text-secondary, #777)'};
+  font-size: 14px;
+`;
