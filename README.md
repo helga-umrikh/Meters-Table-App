@@ -1,10 +1,12 @@
 # Meters App
 
+[![Open Live Demo](https://img.shields.io/badge/%E2%9C%A8_Open_Live_Demo-2EA043?style=for-the-badge&logo=github&logoColor=white)](https://helga-umrikh.github.io/meters-app-monorepo/)
+
 A learning project for browsing utility meters and the areas they belong to. Consists of a React frontend and an Express mock backend, organized as a monorepo.
 
 ## Live deployment
 
-- **Frontend (GitHub Pages):** https://helga-umrikh.github.io/meters-app-monorepo/
+- 🟢 **Frontend (GitHub Pages):** **[helga-umrikh.github.io/meters-app-monorepo](https://helga-umrikh.github.io/meters-app-monorepo/)**
 - **API (Vercel):** https://meters-table-app.vercel.app
   - `/health` — health check
   - `/api/v4/test/meters/` — list of meters
