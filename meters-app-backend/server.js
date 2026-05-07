@@ -4,13 +4,26 @@ const meters = require('./meters.json');
 const areas = require('./areas.json');
 const app = express();
 
+const PORT = process.env.PORT || 3001;
+const ALLOWED_ORIGINS = new Set(
+  (process.env.ALLOWED_ORIGINS || '*').split(',').map(s => s.trim())
+);
+
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  const origin = req.headers.origin;
+  if (ALLOWED_ORIGINS.has('*')) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+  } else if (origin && ALLOWED_ORIGINS.has(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Vary', 'Origin');
+  }
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   if (req.method === 'OPTIONS') return res.sendStatus(204);
   next();
 });
+
+app.get('/health', (_req, res) => res.json({ ok: true }));
 
 app.use(express.json());
 
@@ -37,4 +50,4 @@ app.delete('/api/v4/test/meters/:id/', (req, res) => {
   res.status(204).send();
 });
 
-app.listen(3001, () => console.log('Mock API running on http://localhost:3001'));
+app.listen(PORT, () => console.log(`Mock API running on port ${PORT}`));
