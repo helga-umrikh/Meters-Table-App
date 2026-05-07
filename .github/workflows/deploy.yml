@@ -37,6 +37,7 @@ jobs:
       - name: Build
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          VITE_API_HOST: ${{ vars.VITE_API_HOST }}
         run: npm run build:prod
 
       - uses: actions/configure-pages@v5
