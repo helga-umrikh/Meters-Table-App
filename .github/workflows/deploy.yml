@@ -1,10 +1,10 @@
-name: Deploy counter-app to GitHub Pages
+name: Deploy meters-app-front to GitHub Pages
 
 on:
   push:
     branches: [main]
     paths:
-      - 'counter-app/**'
+      - 'meters-app-front/**'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: counter-app
+        working-directory: meters-app-front
     steps:
       - uses: actions/checkout@v4
 
@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: counter-app/package-lock.json
+          cache-dependency-path: meters-app-front/package-lock.json
 
       - run: npm ci
 
@@ -43,7 +43,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: counter-app/dist
+          path: meters-app-front/dist
 
   deploy:
     needs: build
