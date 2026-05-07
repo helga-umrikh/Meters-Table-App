@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html, body, #root {
-    height: 100%;
+    flex: 1;
   }
 
   body {
@@ -16,7 +16,6 @@ const GlobalStyles = createGlobalStyle`
     font-size: var(--body-size);
     font-weight: var(--body-weight);
     line-height: var(--body-line-height);
-    color: var(--body-color);
     background-color: var(--bg);
     font-synthesis: none;
     text-rendering: optimizeLegibility;

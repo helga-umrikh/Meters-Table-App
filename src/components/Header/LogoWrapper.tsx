@@ -6,9 +6,8 @@ const Wrapper = styled.div`
   right: 64px;
   top: 50%;
   transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  gap: 18px;
+  width: 120px;
+  height: 120px;
 `;
 
 export default function LogoWrapper({ children }: { children: ReactNode }) {

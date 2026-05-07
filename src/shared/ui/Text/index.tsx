@@ -1,12 +1,12 @@
-import { type ElementType, type ReactNode } from 'react';
+import { type CSSProperties, type ElementType, type ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
-type Variant = 'body' | 'heading2' | 'heading4';
+type Variant = 'body' | 'heading2' | 'heading4' | 'button';
 type Color = 'primary' | 'secondary';
 
 const colors: Record<Color, string> = {
-  primary: 'var(--body-color-emphasis)',
-  secondary: 'var(--body-color)',
+  primary: 'var(--text-primary)',
+  secondary: 'var(--text-secondary)',
 };
 
 const variants: Record<Variant, ReturnType<typeof css>> = {
@@ -26,12 +26,19 @@ const variants: Record<Variant, ReturnType<typeof css>> = {
     line-height: var(--h4-line-height);
     vertical-align: middle;
   `,
+  button: css`
+    font-size: var(--button-size);
+    font-weight: var(--button-weight);
+    text-align: center;
+    vertical-align: middle;
+  `,
 };
 
 const defaultTag: Record<Variant, ElementType> = {
   body: 'p',
   heading2: 'h2',
   heading4: 'h4',
+  button: 'span',
 };
 
 interface TextProps {
@@ -40,6 +47,7 @@ interface TextProps {
   as?: ElementType;
   children: ReactNode;
   className?: string;
+  style?: CSSProperties;
 }
 
 const StyledText = styled.span<{ $variant: Variant; $color: Color }>`
@@ -50,13 +58,21 @@ const StyledText = styled.span<{ $variant: Variant; $color: Color }>`
   ${({ $variant }) => variants[$variant]}
 `;
 
-export default function Text({ variant = 'body', color = 'primary', as, children, className }: TextProps) {
+export default function Text({
+  variant = 'body',
+  color = 'primary',
+  as,
+  children,
+  className,
+  style,
+}: TextProps) {
   return (
     <StyledText
       as={as ?? defaultTag[variant]}
       $variant={variant}
       $color={color}
       className={className}
+      style={style}
     >
       {children}
     </StyledText>
