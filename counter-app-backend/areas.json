@@ -1,0 +1,481 @@
+{
+  "count": 34,
+  "results": [
+    {
+      "id": "526237d3e0e34c524382c15c",
+      "number": 1,
+      "str_number": "1",
+      "str_number_full": "кв. 1",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c15e",
+      "number": 2,
+      "str_number": "2",
+      "str_number_full": "кв. 2",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c164",
+      "number": 3,
+      "str_number": "3",
+      "str_number_full": "кв. 3",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c16c",
+      "number": 4,
+      "str_number": "4",
+      "str_number_full": "кв. 4",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c170",
+      "number": 5,
+      "str_number": "5",
+      "str_number_full": "кв. 5",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c174",
+      "number": 6,
+      "str_number": "6",
+      "str_number_full": "кв. 6",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c17c",
+      "number": 7,
+      "str_number": "7",
+      "str_number_full": "кв. 7",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c186",
+      "number": 8,
+      "str_number": "8",
+      "str_number_full": "кв. 8",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c188",
+      "number": 9,
+      "str_number": "9",
+      "str_number_full": "кв. 9",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d4e0e34c524382c1a5",
+      "number": 10,
+      "str_number": "10",
+      "str_number_full": "кв. 10",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d4e0e34c524382c1a7",
+      "number": 11,
+      "str_number": "11",
+      "str_number_full": "кв. 11",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d4e0e34c524382c1a9",
+      "number": 12,
+      "str_number": "12",
+      "str_number_full": "кв. 12",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d4e0e34c524382c1af",
+      "number": 13,
+      "str_number": "13",
+      "str_number_full": "кв. 13",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d2e0e34c524382c10e",
+      "number": 14,
+      "str_number": "14",
+      "str_number_full": "кв. 14",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c17a",
+      "number": 15,
+      "str_number": "15",
+      "str_number_full": "кв. 15",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c17e",
+      "number": 16,
+      "str_number": "16",
+      "str_number_full": "кв. 16",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d2e0e34c524382c0d4",
+      "number": 17,
+      "str_number": "17",
+      "str_number_full": "кв. 17",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d2e0e34c524382c10c",
+      "number": 18,
+      "str_number": "18",
+      "str_number_full": "кв. 18",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c190",
+      "number": 19,
+      "str_number": "19",
+      "str_number_full": "кв. 19",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d2e0e34c524382c0ba",
+      "number": 20,
+      "str_number": "20",
+      "str_number_full": "кв. 20",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d2e0e34c524382c0c0",
+      "number": 21,
+      "str_number": "21",
+      "str_number_full": "кв. 21",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d2e0e34c524382c0ec",
+      "number": 22,
+      "str_number": "22",
+      "str_number_full": "кв. 22",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d2e0e34c524382c0f2",
+      "number": 23,
+      "str_number": "23",
+      "str_number_full": "кв. 23",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c14c",
+      "number": 24,
+      "str_number": "24",
+      "str_number_full": "кв. 24",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c154",
+      "number": 25,
+      "str_number": "25",
+      "str_number_full": "кв. 25",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c168",
+      "number": 26,
+      "str_number": "26",
+      "str_number_full": "кв. 26",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d2e0e34c524382c0de",
+      "number": 27,
+      "str_number": "27",
+      "str_number_full": "кв. 27",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c136",
+      "number": 28,
+      "str_number": "28",
+      "str_number_full": "кв. 28",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d1e0e34c524382c07a",
+      "number": 29,
+      "str_number": "29",
+      "str_number_full": "кв. 29",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d2e0e34c524382c110",
+      "number": 30,
+      "str_number": "30",
+      "str_number_full": "кв. 30",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d2e0e34c524382c112",
+      "number": 31,
+      "str_number": "31",
+      "str_number_full": "кв. 31",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c12c",
+      "number": 32,
+      "str_number": "32",
+      "str_number_full": "кв. 32",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c142",
+      "number": 33,
+      "str_number": "33",
+      "str_number_full": "кв. 33",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    },
+    {
+      "id": "526237d3e0e34c524382c14a",
+      "number": 34,
+      "str_number": "34",
+      "str_number_full": "кв. 34",
+      "house": {
+        "address": "г Санкт-Петербург, ул Чудес, д 256",
+        "id": "526237d1e0e34c524382c073",
+        "fias_addrobjs": [
+          "c2deb16a-0330-4f05-821f-1d09c93331e6",
+          "92d0675e-d7ba-41f1-a602-101ec538d42e"
+        ]
+      }
+    }
+  ]
+}
