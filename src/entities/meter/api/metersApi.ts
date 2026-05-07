@@ -33,3 +33,7 @@ export const fetchMeters = async ({
   });
   return data;
 };
+
+export const deleteMeter = async (meterId: string): Promise<void> => {
+  await apiClient.delete(`/meters/${meterId}/`);
+};

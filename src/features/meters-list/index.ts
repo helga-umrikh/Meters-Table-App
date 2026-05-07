@@ -4,3 +4,9 @@ export type {
   UseMetersListParams,
   UseMetersListResult,
 } from './api/useMetersList';
+
+export { useDeleteMeter } from './api/useDeleteMeter';
+export type {
+  UseDeleteMeterState,
+  UseDeleteMeterTrigger,
+} from './api/useDeleteMeter';

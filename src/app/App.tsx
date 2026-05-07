@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { HomePage } from '@/pages/Home';
 import { Header } from '@/widgets/Header';
 
+import { StoreProvider } from './store';
 import { GlobalStyles } from './styles/global';
 
 const AppContainer = styled.div`
@@ -14,12 +15,12 @@ const AppContainer = styled.div`
 
 export function App() {
   return (
-    <>
+    <StoreProvider>
       <GlobalStyles />
       <AppContainer>
         <Header />
         <HomePage />
       </AppContainer>
-    </>
+    </StoreProvider>
   );
 }
