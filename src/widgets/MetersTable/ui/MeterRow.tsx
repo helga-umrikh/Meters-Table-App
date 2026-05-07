@@ -1,7 +1,7 @@
 import type { ComponentType } from 'react';
 
 import { type Area } from '@/entities/area';
-import { type Meter } from '@/entities/meter';
+import { type KnownMeterKind, type Meter } from '@/entities/meter';
 import ColdWaterIcon from '@/shared/assets/cold-water.svg?react';
 import ElectricityIcon from '@/shared/assets/electricity.svg?react';
 import FireIcon from '@/shared/assets/fire.svg?react';
@@ -16,47 +16,57 @@ interface MeterRowProps {
   index: number;
   area: Area | undefined;
   disabled?: boolean;
+  onDelete?: (meterId: string) => void;
 }
 
-const TYPE_LABELS: Partial<Record<Meter['_type'], string>> = {
-  coldWaterAreaMeter: 'ХВС',
-  hotWaterAreaMeter: 'ГВС',
+const TYPE_LABELS: Partial<Record<KnownMeterKind, string>> = {
+  ColdWaterAreaMeter: 'ХВС',
+  HotWaterAreaMeter: 'ГВС',
+  HeatAreaMeter: 'Отопление',
+  ElectricityAreaMeter: 'Электричество',
 };
 
-const TYPE_LOGOS: Record<Meter['_type'], ComponentType> = {
-  heatSupply: FireIcon,
-  coldWaterAreaMeter: ColdWaterIcon,
-  hotWaterAreaMeter: HotWaterIcon,
-  electricitySupply: ElectricityIcon,
+const TYPE_LOGOS: Partial<Record<KnownMeterKind, ComponentType>> = {
+  HeatAreaMeter: FireIcon,
+  ColdWaterAreaMeter: ColdWaterIcon,
+  HotWaterAreaMeter: HotWaterIcon,
+  ElectricityAreaMeter: ElectricityIcon,
 };
+
+const getPrimaryKind = (types: string[]): KnownMeterKind | undefined =>
+  types.find((t) => t !== 'AreaMeter') as KnownMeterKind | undefined;
 
 const formatDate = (date: string): string => {
-  const [year, month, day] = date.split('-');
+  const d = date.split('T')[0];
+  const [year, month, day] = d.split('-');
   return `${day}.${month}.${year}`;
 };
 
-const formatArea = (area: Area | undefined): string => area?.address ?? '—';
+const formatAddress = (area: Area | undefined): string => {
+  if (!area) return '—';
+  return `${area.house.address}, ${area.str_number_full}`;
+};
 
-export const MeterRow = ({ meter, index, area, disabled }: MeterRowProps) => {
-  const Logo = TYPE_LOGOS[meter._type];
+export const MeterRow = ({ meter, index, area, disabled, onDelete }: MeterRowProps) => {
+  const kind = getPrimaryKind(meter._type);
+  const Logo = kind ? TYPE_LOGOS[kind] : undefined;
+  const label = kind ? TYPE_LABELS[kind] : '—';
 
-  const handleDelete = () => {
-    console.log('delete', meter.id);
-  };
+  const handleDelete = () => onDelete?.(meter.id);
 
   return (
     <Row>
       <Td color="secondary">{index + 1}</Td>
       <Td>
         <TypeCell>
-          <Logo />
-          {TYPE_LABELS[meter._type]}
+          {Logo && <Logo />}
+          {label}
         </TypeCell>
       </Td>
       <Td>{formatDate(meter.installation_date)}</Td>
       <Td>{meter.is_automatic ? 'да' : 'нет'}</Td>
-      <Td>{meter.initial_values}</Td>
-      <Td>{formatArea(area)}</Td>
+      <Td>{meter.initial_values.join(', ')}</Td>
+      <Td>{formatAddress(area)}</Td>
       <Td color="secondary">
         <DescriptionCell>
           <span>{meter.description}</span>

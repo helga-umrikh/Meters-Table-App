@@ -1,13 +1,22 @@
+export type KnownMeterKind =
+  | 'ColdWaterAreaMeter'
+  | 'HotWaterAreaMeter'
+  | 'HeatAreaMeter'
+  | 'ElectricityAreaMeter'
+  | 'AreaMeter';
+
+export type MeterKind = KnownMeterKind | (string & {});
+
 export interface Meter {
-  id: number;
-  _type:
-    | 'heatSupply'
-    | 'coldWaterAreaMeter'
-    | 'hotWaterAreaMeter'
-    | 'electricitySupply';
-  installation_date: string;
-  is_automatic: boolean;
-  initial_values: number;
-  area_id: number;
+  id: string;
+  _type: MeterKind[];
+  area: { id: string };
+  is_automatic: boolean | null;
+  communication?: string;
   description: string;
+  serial_number: string;
+  installation_date: string;
+  brand_name: string | null;
+  model_name: string | null;
+  initial_values: number[];
 }

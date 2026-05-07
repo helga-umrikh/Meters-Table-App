@@ -1,45 +1,28 @@
-import { useEffect } from 'react';
+import { useState } from 'react';
 
-import { mockAreas } from '@/entities/area';
-import { mockMeters } from '@/entities/meter';
 import { useDeleteMeter, useMetersList } from '@/features/meters-list';
 import { PageWrapper, Text } from '@/shared/ui';
 import { MetersTable } from '@/widgets/MetersTable';
 
+const PAGE_SIZE = 20;
+
 export function HomePage() {
-  const { data, isLoading, error, refetch } = useMetersList({ limit: 20, offset: 0 });
+  const [currentPage, setCurrentPage] = useState(1);
+  const offset = (currentPage - 1) * PAGE_SIZE;
+
+  const { data, isLoading, error, refetch } = useMetersList({
+    limit: PAGE_SIZE,
+    offset,
+  });
   const [deleteMeter, deleteState] = useDeleteMeter();
 
-  useEffect(() => {
-    if (isLoading) return;
-    if (error) {
-      console.error('[useMetersList] error', error);
-      return;
+  const handleDelete = async (meterId: string) => {
+    try {
+      await deleteMeter(meterId);
+      refetch();
+    } catch (err) {
+      console.error('[delete] failed', err);
     }
-    if (!data) return;
-
-    const addressByAreaId = new Map(data.areas.map((a) => [a.id, a]));
-    const rows = data.meters.map((m) => {
-      const area = addressByAreaId.get(m.area.id);
-      return {
-        meterId: m.id,
-        street: area?.house.address ?? '—',
-        houseId: area?.house.id ?? '—',
-        apartment: area?.str_number_full ?? '—',
-      };
-    });
-
-    console.log('[useMetersList] data', data);
-    console.table(rows);
-  }, [data, isLoading, error]);
-
-  const handleDeleteFirst = async () => {
-    if (!data || data.meters.length === 0) return;
-    const target = data.meters[0];
-    console.log('[useDeleteMeter] deleting', target.id);
-    await deleteMeter(target.id);
-    console.log('[useDeleteMeter] deleted', target.id);
-    refetch();
   };
 
   return (
@@ -48,16 +31,28 @@ export function HomePage() {
         Список счётчиков
       </Text>
 
-      <button
-        type="button"
-        onClick={handleDeleteFirst}
-        disabled={!data || deleteState.isLoading}
-        style={{ marginBottom: 12 }}
-      >
-        {deleteState.isLoading ? 'Удаление…' : 'Удалить первый счётчик (тест)'}
-      </button>
+      {Boolean(error) && (
+        <Text variant="body" color="secondary" style={{ marginBottom: 12 }}>
+          Не удалось загрузить данные
+        </Text>
+      )}
 
-      <MetersTable meters={mockMeters} areas={mockAreas} />
+      {isLoading && !data ? (
+        <Text variant="body" color="secondary">
+          Загрузка…
+        </Text>
+      ) : (
+        <MetersTable
+          meters={data?.meters ?? []}
+          areas={data?.areas ?? []}
+          total={data?.total ?? 0}
+          pageSize={PAGE_SIZE}
+          currentPage={currentPage}
+          onPageChange={setCurrentPage}
+          onDeleteMeter={handleDelete}
+          isMutating={deleteState.isLoading}
+        />
+      )}
     </PageWrapper>
   );
 }

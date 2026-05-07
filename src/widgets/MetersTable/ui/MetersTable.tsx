@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import { type Area } from '@/entities/area';
 import { type Meter } from '@/entities/meter';
 import { Pagination } from '@/shared/ui';
@@ -10,24 +8,31 @@ import { Table, THead, TBody, Th, TFooter, tableColumns } from './styles';
 interface MetersTableProps {
   meters: Meter[];
   areas: Area[];
+  total: number;
+  pageSize: number;
+  currentPage: number;
+  onPageChange: (page: number) => void;
+  onDeleteMeter?: (meterId: string) => void;
+  isMutating?: boolean;
 }
 
-const PAGE_SIZE = 20;
+export const MetersTable = ({
+  meters,
+  areas,
+  total,
+  pageSize,
+  currentPage,
+  onPageChange,
+  onDeleteMeter,
+  isMutating,
+}: MetersTableProps) => {
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
-export const MetersTable = ({ meters, areas }: MetersTableProps) => {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const totalPages = Math.max(1, Math.ceil(meters.length / PAGE_SIZE));
-  const pageMeters = meters.slice(
-    (currentPage - 1) * PAGE_SIZE,
-    currentPage * PAGE_SIZE
-  );
-
-  const getArea = (areaId: number): Area | undefined =>
-    areas.find((area) => area.id === areaId);
+  const areaById = new Map(areas.map((a) => [a.id, a]));
+  const startIndex = (currentPage - 1) * pageSize;
 
   const handlePageChange = (page: number) => {
-    setCurrentPage(Math.min(Math.max(1, page), totalPages));
+    onPageChange(Math.min(Math.max(1, page), totalPages));
   };
 
   return (
@@ -40,12 +45,14 @@ export const MetersTable = ({ meters, areas }: MetersTableProps) => {
         </tr>
       </THead>
       <TBody>
-        {pageMeters.map((meter, index) => (
+        {meters.map((meter, index) => (
           <MeterRow
             key={meter.id}
             meter={meter}
-            index={(currentPage - 1) * PAGE_SIZE + index}
-            area={getArea(meter.area_id)}
+            index={startIndex + index}
+            area={areaById.get(meter.area.id)}
+            onDelete={onDeleteMeter}
+            disabled={isMutating}
           />
         ))}
       </TBody>
